@@ -15,6 +15,7 @@ export async function getAllMusic(){
         lyricist: music.lyricist,
         composer: music.composer,
         arranger: music.arranger,
+        assetbundleName: music.assetbundleName
     }))
 }
 
