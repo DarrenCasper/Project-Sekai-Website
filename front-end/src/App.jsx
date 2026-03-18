@@ -1,19 +1,22 @@
-import { BrowserRouter, Route, Routes} from "react-router"
+import { Route, Routes} from "react-router-dom"
 import { Home } from "./pages/Home"
+import { Units } from "./pages/Units"
+import { Characters } from "./pages/Characters"
+import { Music } from "./pages/Music"
+import { MainLayout } from "./layout/mainlayout"
 import { NotFound } from "./pages/NotFound"
 
 function App() {
- 
-
   return (
-    <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home/>}></Route>
-          <Route path="*" element={<NotFound/>}></Route>
-        </Routes>
-      </BrowserRouter>
-    </>
+    <Routes>
+      <Route element={<MainLayout />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/music" element={<Music />} />
+        <Route path="/units" element={<Units />} />
+        <Route path="/characters" element={<Characters />} />
+        <Route path="*" element={<NotFound />} />
+      </Route>
+    </Routes>
   )
 }
 

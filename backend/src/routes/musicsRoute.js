@@ -6,7 +6,8 @@ const router = express.Router()
 
 router.get("/", async (req, res) => {
     try{
-        const musics = await getAllMusic()
+        const sort = req.query.sort || "default"
+        const musics = await getAllMusic(sort)
         res.json(musics)
     } catch (error){
         console.error(error)
