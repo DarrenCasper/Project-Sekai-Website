@@ -5,6 +5,7 @@ import { Characters } from "./pages/Characters"
 import { Music } from "./pages/Music"
 import { MainLayout } from "./layout/mainlayout"
 import { NotFound } from "./pages/NotFound"
+import { CharacterProfile } from "./pages/CharacterProfile"
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/music" element={<Music />} />
         <Route path="/units" element={<Units />} />
         <Route path="/characters" element={<Characters />} />
+        <Route path="/characters/:id" element={<CharacterProfile/>}/>
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

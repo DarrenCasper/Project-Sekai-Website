@@ -1,4 +1,4 @@
-export async function getAllMusic(sort = "title") {
+export async function getAllMusic(sort = "default") {
   const [musicResponse, difficultyResponse] = await Promise.all([
     fetch("https://raw.githubusercontent.com/Sekai-World/sekai-master-db-diff/main/musics.json"),
     fetch("https://raw.githubusercontent.com/Sekai-World/sekai-master-db-diff/main/musicDifficulties.json")

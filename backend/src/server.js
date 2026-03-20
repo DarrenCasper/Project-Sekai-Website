@@ -2,6 +2,7 @@ import express from "express"
 import cors from "cors"
 import cardsRoutes from "./routes/cardsRoute.js"
 import musicRoutes from "./routes/musicsRoute.js"
+import characterRoutes from "./routes/CharacterRoute.js"
 
 const app = express()
 
@@ -16,6 +17,7 @@ app.get("/", (req, res) => {
 // app.use("/api/cards", cardsRoutes)
 
 app.use("/api/music", musicRoutes)
+app.use("/api/characters", characterRoutes)
 
 app.listen(5000, () => {
   console.log("Server running on http://localhost:5000")
